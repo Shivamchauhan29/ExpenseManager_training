@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ExpenseManager</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ExpenseManager.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-light">
+    <div class="contriner ">
+    <div class="header">
+      <nav class="navbar navbar-light bg-light fixed-top pb-0">
+        <div class="container">
+          <a class="navbar-brand text-center" href="#">
+            <img src="~/images/logo.png" width="50" height="50" /><br />
+            <span class="badge rounded-pill bg-primary " style="font-size: 9px;">ExpsnseManager</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header  bg-primary text-light">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Expsnse Manager</h5>
+              <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item m-1">
+                  <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                </li>
+                <li class="nav-item m-1">
+                  <a class="nav-link" asp-controller="Categories" asp-action="Index">Categories</a>
+                </li>
+                <li class="nav-item m-1">
+                  <a class="nav-link" href="#">Transactions</a>
+                </li>
+                <li class="nav-item dropdown m-1">
+                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Profile
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Register</a></li>
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <hr />
+    @RenderBody()
+    
+  
+    <!-- <footer class="footer bg-info">
+        <div class="container">
+          <span class="text-light">Place sticky footer content here.</span>
+        </div>
+    </footer> -->
+
+  </div>
+
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

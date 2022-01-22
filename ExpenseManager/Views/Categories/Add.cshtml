@@ -1,0 +1,44 @@
+﻿ <div class="Add-Category container">
+      <h4 class="m-0 p-0">Category</h4>
+      <p class="text-muted"> Mendatory fields are mared with <span class="text-danger">*</span> </p>
+      <div class="container border p-2 shadow">
+        <form>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Category Name<span class="text-danger">*</span>
+              :</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3">
+              <div class="form-text">
+                Duplicate Entry Not Allowed
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">A short Description:</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="inputPassword3" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Select Type <span
+                class="text-danger">*</span>:</label>
+            <div class="col-sm-10">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio1">Income</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-danger" for="btnradio2">Expsnse</label>
+
+              </div>
+              <div class="form-text text-danger">
+                This Field is mendetory. Please Select
+              </div>
+            </div>
+          </div>
+          <div class="row p-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>

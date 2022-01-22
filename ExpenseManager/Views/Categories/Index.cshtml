@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Category>
+<div class="container categories">
+    <div class="row">
+        <div class="col-10">
+            <h4>Categories</h4>
+            <p class="text-muted">Click Category to Edit</p>
+
+        </div>
+        <div class="col-2">
+            <a class="btn btn-info float-end" asp-controller="Categories" asp-action="Add">
+                Add
+            </a>
+        </div>
+    </div>
+
+    <div class="list-group overflow-auto" style="max-height: 56vh">
+        @foreach (var cat in  Model)
+        {
+           <a href="#" class="list-group-item list-group-item-action" aria-current="true" title="">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    @cat.Title 
+                        @if(cat.CategoryType == CategoryType.Income)
+                        {
+                            <span class="mx-1 badge bg-success">Income</span>
+                        }else{
+                            <span class="mx-1 badge bg-danger">Expense</span>
+                        }
+                        
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">@cat.Description</p>
+        </a> 
+        }
+        @*<a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    Salary Paid<span class="mx-1 badge bg-danger">Expsnse</span>
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">test description</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true" title="">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    Salary Recieved <span class="mx-1 badge bg-success">Income</span>
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">test description</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    Salary Paid<span class="mx-1 badge bg-danger">Expsnse</span>
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">test description</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true" title="">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    Salary Recieved <span class="mx-1 badge bg-success">Income</span>
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">test description</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-original-title="click to Edit">
+                    Salary Paid<span class="mx-1 badge bg-danger">Expsnse</span>
+                </h6>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">test description</p>
+        </a>*@
+       
+    </div>
+
+</div>
